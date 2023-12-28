@@ -1,0 +1,294 @@
+/* Fonts <------------------------------------------------------------------*/
+@font-face {
+    font-family: 'interBold';
+    src: url('assets/fonts/static/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'interExtraBold';
+    src: url('assets/fonts/static/Inter-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'interRegular';
+    src: url('assets/fonts/static/Inter-Regular.ttf') format('truetype');
+}
+
+/* Variables <------------------------------------------------------------------*/
+:root {
+    --interBold: 'interBold', sans-serif;
+    --interExtraBold: 'interExtraBold', sans-serif;
+    --interRegular: 'interRegular', sans-serif;
+}
+
+/* Reset <------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    text-decoration: none;
+    /* this will remove the underline */
+    color: inherit;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: auto;
+    width: min(100%, 1024px);
+    font-family: var(--interRegular);
+}
+
+/* Components <------------------------------------------------------------------*/
+h1 {
+    font-family: var(--interBold);
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: var(--interBold);
+    font-size: 1.8rem;
+}
+
+p {
+    font-family: var(--interRegular);
+    color: grey;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+/* ----> Start 
+/* Header <------------------------------------------------------------------*/
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    align-items: center;
+    height: 10rem;
+}
+
+.header .tags {
+    justify-self: end;
+
+}
+
+.header .tags ul {
+    list-style: none;
+
+    display: flex;
+
+    font-size: 2rem;
+}
+
+.header .tags ul li {
+    margin-left: 2rem;
+    color: grey;
+}
+
+.header .tags ul li:hover {
+    color: #dfa85b;
+}
+
+/* HomePage <------------------------------------------------------------------*/
+.homePage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hero hero new"
+        "question about new"
+        "portfillo portfillo portfillo"
+    ;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Hero <------------------------------------------------------------------*/
+.hero {
+    grid-area: hero;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* new <------------------------------------------------------------------*/
+.new {
+    grid-area: new;
+
+    flex-direction: column;
+
+    background-color: #00001a;
+    padding: 2rem;
+
+}
+
+.new>h1 {
+    color: #dfa85b;
+    margin-bottom: 2rem;
+}
+
+.headContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    color: white;
+    height: 90%;
+}
+
+.headContainer hr {
+    margin: 2rem 0;
+    background-color: white;
+}
+
+.headlines h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.headlines h2:hover {
+    color: #dfa85b;
+}
+
+/* question <------------------------------------------------------------------*/
+.question h1 {
+    grid-area: question;
+    font-family: var(--interExtraBold);
+    font-size: 4.8rem;
+}
+
+/* about <------------------------------------------------------------------*/
+.about {
+    grid-area: about;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.about button {
+    background-color: #f15d51;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    font-family: var(--interBold);
+
+    height: 4.5rem;
+    width: 18rem;
+    margin-top: 2rem;
+
+}
+
+.about button:hover {
+    background-color: black;
+}
+
+/* portfillo <------------------------------------------------------------------*/
+.portfillo {
+    margin-top: 4rem;
+
+    grid-area: portfillo;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 14rem;
+    gap: 2rem;
+
+}
+
+.card {
+    display: flex;
+    height: 100%;
+}
+
+.card img {
+    margin-right: 2rem;
+    height: 100%;
+}
+
+.infromation {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: flex-start;
+}
+
+.infromation .title {
+    margin-bottom: 1rem;
+}
+
+.infromation h1 {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+.infromation h2 {
+    font-size: 1.6rem;
+    font-family: var(--interExtraBold);
+}
+
+.infromation h2:hover {
+    color: #f15d51;
+}
+
+.infromation p {
+    color: grey;
+    font-size: 1.35rem;
+}
+
+
+/* ----> End <------------------------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 10px;
+    }
+
+    .homePage {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "hero"
+            "new"
+            "question"
+            "about"
+            "portfillo"
+        ;
+
+        padding: 2rem;
+    }
+    .header .tags{
+        visibility: hidden;
+    }
+
+    .hero img {
+        content: url(/assets/images/image-web-3-mobile.jpg);
+    }
+
+    .portfillo {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 14rem);
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jquery - printThis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Ramadan</title>
+</head>
+
+<body>
+    <!-- Title -->
+    <h1 class="title">Ramadan</h1>
+
+    <!-- Mofifcations -->
+    <div class="modifications">
+        <button id="sync">Sync</button>
+        <button id="save">save</button>
+
+        <button id="delete_button">Delete</button>
+        <input id="delete_field" type="text">
+
+    </div>
+    <hr>
+
+    <!-- Table of Persons -->
+    <table id="table">
+        <tr>
+            <th>Chapter</th>
+            <th>Persons</th>
+        </tr>
+    </table>
+    <hr>
+
+    <!-- Form One -->
+    <div class="insert">
+
+        <div class="input">
+            <h1>Name</h1>
+            <input id="name" type="text">
+        </div>
+
+        <div class="input">
+            <h1>Chapters</h1>
+            <input id="chapters" type="number">
+        </div>
+
+        <button id="submit">submit</button>
+    </div>
+    <hr>
+
+    <!-- Generate-->
+    <button id="generate">Generate</button>
+    <button id="print">Print</button>
+
+    <!-- Final Table  -->
+    <div class="cont">
+        <h1>جدول القيام</h1>
+        <table id="ftable">
+            <tr>
+                <th>الليلة</th>
+                <th>الامام</th>
+                <th>الجزء</th>
+                <th>يسمع له</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+
+</html>
