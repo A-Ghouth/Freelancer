@@ -1,6 +1,6 @@
-# Freelancer: Random Projects in Different Fields
+# Random Projects in Different Fields
 
-This repository contains a collection of small projects that I have worked on as a freelancer, covering a range of different fields and technologies.
+This repository contains a collection of small projects.
 
 ## Projects
 
